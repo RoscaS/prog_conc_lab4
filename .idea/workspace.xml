@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ea4c8f-abfa-428c-9cb1-c53ac63c0609" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/Simu_Etu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/Simu_Etu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" afterDir="false" />
-    </list>
+    <list default="true" id="97ea4c8f-abfa-428c-9cb1-c53ac63c0609" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +23,7 @@
                 <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="1246">
-                      <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="36" />
+                      <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="33" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -367,12 +363,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555358769240</updated>
-      <workItem from="1555358776644" duration="4136000" />
+      <workItem from="1555358776644" duration="4171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4136000" />
+    <option name="totallyTimeSpent" value="4171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="917" y="-24" width="2923" height="2154" extended-state="0" />
@@ -388,11 +384,11 @@
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" x="1211" y="884" width="958" height="289" id="Terminal" type="FLOATING" weight="0.1319648" />
+      <window_info active="true" anchor="bottom" x="1209" y="858" width="958" height="289" id="Terminal" type="FLOATING" visible="true" weight="0.1319648" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="2698" y="660" width="764" height="453" id="Run" order="2" type="FLOATING" visible="true" weight="0.3297561" />
+      <window_info anchor="bottom" x="2698" y="660" width="764" height="453" id="Run" order="2" type="FLOATING" weight="0.3297561" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -592,7 +588,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1246">
-          <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="36" />
+          <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -61,9 +61,9 @@ public class MyCity extends JPanel {
         camionImg = ImageIO.read(new File("camion.png"));
 
 
-        // People poep = peopleList.get(0);
-        // Place pl1 = placeList[0];
-        // Place pl2 = placeList[1];
+        People poep = peopleList.get(0);
+        Place pl1 = placeList[0];
+        Place pl2 = placeList[1];
 
         MoverHab m = new MoverHab(poep, pl1, pl2, this);
 
