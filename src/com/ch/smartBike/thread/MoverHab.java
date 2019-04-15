@@ -37,7 +37,9 @@ public class MoverHab extends Thread {
 			deltaXAdd += deltaX;
 			deltaYAdd += deltaY;
 
-			people.setPosition(new Point2D.Double(start.getX() + deltaXAdd, start.getY() + deltaYAdd));
+			people.setPosition(
+					new Point2D.Double(start.getX() + deltaXAdd, start.getY() + deltaYAdd)
+			);
 			myCity.repaint();
 			try {
 				sleep(50);

@@ -7,10 +7,8 @@ import javax.swing.JFrame;
 
 
 public class Simu_Etu {
-
-	public static void main(String[] args) throws IOException
-	{
-		JFrame frame = new JFrame("Bike Simulation");
+    public static void main(String[] args) throws IOException {
+        JFrame frame = new JFrame("Bike Simulation");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Config config = new Config();
@@ -20,5 +18,5 @@ public class Simu_Etu {
         frame.setContentPane(city);
         frame.pack();
         frame.setVisible(true);
-	}
+    }
 }
