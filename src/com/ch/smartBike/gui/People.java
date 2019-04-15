@@ -64,6 +64,10 @@ public class People {
 		this.state = state;
 	}
 
+	public StatePeople getState() {
+		return state;
+	}
+
 
 
 }

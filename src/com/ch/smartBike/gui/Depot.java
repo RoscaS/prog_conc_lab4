@@ -45,6 +45,4 @@ public class Depot implements Site{
 	public void setNbPlaceVide(int nbPlaceVide) {
 		this.nbPlaceVide = nbPlaceVide;
 	}
-
-
 }

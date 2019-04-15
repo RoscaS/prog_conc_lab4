@@ -18,6 +18,13 @@ public class Config {
         this.nbHab = 5;
         this.nbBorne = 5;
         this.nbVelo = 30;
+
+
+
+        // 5 * (5 - 2) + 3 = 18
+
+        // 4 slots
+        // 7 vélos
     }
 
     public Config(int nbSite, int nbHab, int nbBorne, int nbVelo) {

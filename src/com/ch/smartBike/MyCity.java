@@ -41,9 +41,12 @@ public class MyCity extends JPanel {
                     120 + radius + radius * Math.cos(2.0 * 3.14 / ((float) nbSite) * ((float) i + 1)),
                     10 + radius + radius * Math.sin(2.0 * 3.14 / ((float) nbSite) * ((float) i + 1))
             );
+
             Place place = new Place(ParamList.getSiteName(i - 1), position, nbBorne - 2, nbBorne);
+
             placeList[i - 1] = place;
         }
+
         depot = new Depot(new Point2D.Double(650, 20), nbVelo - (nbSite * (nbBorne - 2)), nbVelo);
 
         int nbHab = config.getNbHab();
@@ -61,13 +64,17 @@ public class MyCity extends JPanel {
         camionImg = ImageIO.read(new File("camion.png"));
 
 
-        People poep = peopleList.get(0);
-        Place pl1 = placeList[0];
-        Place pl2 = placeList[1];
 
-        MoverHab m = new MoverHab(poep, pl1, pl2, this);
+
+        Place a_l_ecole = placeList[1];
+        Place l_appart = placeList[0];
+
+        People marcel_mouktar = peopleList.get(2);
+
+        MoverHab m = new MoverHab(marcel_mouktar, l_appart, a_l_ecole, this);
 
         m.start();
+
 
 
         repaint();
