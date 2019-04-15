@@ -1,4 +1,4 @@
-package smartBike;
+package com.ch.smartBike;
 
 /**
  * classe de configuration des parametres de l'application

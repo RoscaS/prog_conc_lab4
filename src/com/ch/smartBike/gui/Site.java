@@ -1,4 +1,4 @@
-package smartBike.gui;
+package com.ch.smartBike.gui;
 
 public interface Site {
 

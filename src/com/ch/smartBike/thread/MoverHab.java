@@ -1,27 +1,26 @@
-package smartBike.thread;
+package com.ch.smartBike.thread;
 
 import java.awt.geom.Point2D;
 
-import smartBike.MyCity;
-import smartBike.gui.Camion;
-import smartBike.gui.Site;
+import com.ch.smartBike.MyCity;
+import com.ch.smartBike.gui.People;
+import com.ch.smartBike.gui.Site;
 
-public class MoverCamion extends Thread {
-
+public class MoverHab extends Thread {
 	private MyCity myCity;
 
 	private boolean stillRunning;
 
-	private Camion camion;
+	private People people;
 	private Site start;
 	private Site dest;
 
 	private double deltaX;
 	private double deltaY;
 
-	public MoverCamion(Camion aCamion, Site aStart, Site aDest, MyCity aMyCity) {
+	public MoverHab(People aPeople, Site aStart, Site aDest, MyCity aMyCity) {
 		myCity = aMyCity;
-		camion = aCamion;
+		people = aPeople;
 		start = aStart;
 		dest = aDest;
 
@@ -37,7 +36,8 @@ public class MoverCamion extends Thread {
 		for (int i = 1; i <= 100; i++) {
 			deltaXAdd += deltaX;
 			deltaYAdd += deltaY;
-			camion.setPosition(new Point2D.Double(start.getX() + deltaXAdd, start.getY() + deltaYAdd));
+
+			people.setPosition(new Point2D.Double(start.getX() + deltaXAdd, start.getY() + deltaYAdd));
 			myCity.repaint();
 			try {
 				sleep(50);
@@ -45,7 +45,7 @@ public class MoverCamion extends Thread {
 				e.printStackTrace();
 			}
 		}
-		camion.setPosition(new Point2D.Double(dest.getX(), dest.getY()));
+		people.setPosition(new Point2D.Double(dest.getX(), dest.getY()));
 		myCity.repaint();
 		stillRunning = false;
 	}

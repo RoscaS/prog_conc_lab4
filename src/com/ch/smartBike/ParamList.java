@@ -1,4 +1,4 @@
-package smartBike;
+package com.ch.smartBike;
 /*
  * Classe concernant les ressources statiques
  */

@@ -1,21 +1,37 @@
-package smartBike.gui;
+package com.ch.smartBike.gui;
 
 import java.awt.geom.Point2D;
+import java.util.Random;
 
-public class Depot implements Site{
-
+public class Place implements Site{
+	private String siteName;
 	private Point2D position;
 	private int nbVelo;
 	private int nbPlaceVide;
 
-	public Depot(Point2D aPosition, int aNbVelo, int aNbBorne) {
+	public Place(String aSiteNAme, Point2D aPosition, int aNbVelo, int aNbBorne) {
+		siteName = aSiteNAme;
 		position = aPosition;
 		nbVelo = aNbVelo;
 		nbPlaceVide = aNbBorne - aNbVelo;
 	}
 
+	public static Place getAlea(Place[] placeList) {
+		Random rand = new Random();
+		int value = rand.nextInt(placeList.length);
+		return placeList[value];
+	}
+
+	public boolean equals(Object o) {
+		if (!(o instanceof Place)) {
+			return false;
+		}
+		Place other = (Place) o;
+		return this.siteName == other.siteName;
+	}
+
 	public String getSiteName() {
-		return "DEPOT";
+		return siteName;
 	}
 
 	public Point2D getPosition() {
@@ -45,6 +61,7 @@ public class Depot implements Site{
 	public void setNbPlaceVide(int nbPlaceVide) {
 		this.nbPlaceVide = nbPlaceVide;
 	}
+
 
 
 }

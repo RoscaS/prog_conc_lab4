@@ -1,4 +1,4 @@
-package smartBike;
+package com.ch.smartBike;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -12,7 +12,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import smartBike.gui.*;
+import com.ch.smartBike.gui.*;
 
 public class MyCity extends JPanel {
 
