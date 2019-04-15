@@ -38,7 +38,8 @@ public class MyCity extends JPanel {
 		for (int i = 1; i <= nbSite; i++) {
 			Point2D position = new Point2D.Double(
 					120 + radius + radius * Math.cos(2.0 * 3.14 / ((float) nbSite) * ((float) i + 1)),
-					10 + radius + radius * Math.sin(2.0 * 3.14 / ((float) nbSite) * ((float) i + 1)));
+					10 + radius + radius * Math.sin(2.0 * 3.14 / ((float) nbSite) * ((float) i + 1))
+			);
 			Place place = new Place(ParamList.getSiteName(i - 1), position, nbBorne - 2, nbBorne);
 			placeList[i-1]=place;
 		}
