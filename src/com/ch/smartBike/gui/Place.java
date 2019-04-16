@@ -6,14 +6,16 @@ import java.util.Random;
 public class Place implements Site{
 	private String siteName;
 	private Point2D position;
-	private int nbVelo;
-	private int nbPlaceVide;
+	private int bikeNumber;
+	private int freeSlots;
+	private int slots;
 
-	public Place(String aSiteNAme, Point2D aPosition, int aNbVelo, int aNbBorne) {
-		siteName = aSiteNAme;
-		position = aPosition;
-		nbVelo = aNbVelo;
-		nbPlaceVide = aNbBorne - aNbVelo;
+	public Place(String aSiteNAme, Point2D aPosition, int slots) {
+		this.siteName = aSiteNAme;
+		this.position = aPosition;
+		this.bikeNumber = slots - 2;
+		this.freeSlots = 2;
+		this.slots = slots;
 	}
 
 	public static Place getAlea(Place[] placeList) {
@@ -28,6 +30,47 @@ public class Place implements Site{
 		}
 		Place other = (Place) o;
 		return this.siteName == other.siteName;
+	}
+
+
+
+	public boolean isFreeSlots() {
+		return freeSlots > 0;
+	}
+
+
+	public void takeBike(Person person) {
+		bikeNumber = bikeNumber + 1;
+		freeSlots = freeSlots - 1;
+		Person.StatePeople s = Person.StatePeople.BIKE;
+		person.setState(s);
+		System.out.println(person.getName() + "\tgot a bike" + " \t\t\tstate: " + s);
+	}
+
+	public void leaveBike(Person person) {
+		bikeNumber = bikeNumber - 1;
+		freeSlots = freeSlots + 1;
+		Person.StatePeople s = Person.StatePeople.WORK;
+		person.setState(s);
+		System.out.println(person.getName() + "\tdropped his bike" + "\t\tstate: " + s);
+	}
+
+
+
+
+	public void incrementBikes(int x) {
+		bikeNumber = bikeNumber + x;
+		freeSlots = freeSlots - x;
+	}
+
+	public void decrementBikes(int x) {
+		bikeNumber = bikeNumber - x;
+		freeSlots = freeSlots + x;
+	}
+
+
+	public int getSlots() {
+		return slots;
 	}
 
 	public String getSiteName() {
@@ -46,22 +89,17 @@ public class Place implements Site{
 		return (int) position.getY();
 	}
 
-	public int getNbVelo() {
-		return nbVelo;
+	public int getBikeNumber() { return bikeNumber; }
+
+	public void setBikeNumber(int bikeNumber) {
+		this.bikeNumber = bikeNumber;
 	}
 
-	public void setNbVelo(int nbVelo) {
-		this.nbVelo = nbVelo;
+	public int getFreeSlots() {
+		return freeSlots;
 	}
 
-	public int getNbPlaceVide() {
-		return nbPlaceVide;
+	public void setFreeSlots(int freeSlots) {
+		this.freeSlots = freeSlots;
 	}
-
-	public void setNbPlaceVide(int nbPlaceVide) {
-		this.nbPlaceVide = nbPlaceVide;
-	}
-
-
-
 }

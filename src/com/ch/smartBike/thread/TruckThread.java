@@ -6,7 +6,7 @@ import com.ch.smartBike.MyCity;
 import com.ch.smartBike.gui.Camion;
 import com.ch.smartBike.gui.Site;
 
-public class MoverCamion extends Thread {
+public class TruckThread extends Thread {
 
 	private MyCity myCity;
 
@@ -19,7 +19,7 @@ public class MoverCamion extends Thread {
 	private double deltaX;
 	private double deltaY;
 
-	public MoverCamion(Camion aCamion, Site aStart, Site aDest, MyCity aMyCity) {
+	public TruckThread(Camion aCamion, Site aStart, Site aDest, MyCity aMyCity) {
 		myCity = aMyCity;
 		camion = aCamion;
 		start = aStart;

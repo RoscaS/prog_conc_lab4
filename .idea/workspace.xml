@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ea4c8f-abfa-428c-9cb1-c53ac63c0609" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/ch/smartBike/Helpers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ch/smartBike/thread/PeopleThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Depot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Depot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverCamion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/thread/TruckThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,18 +26,55 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.68333334">
+    <splitter split-orientation="horizontal" split-proportion="0.6938847">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.7199414">
+        <splitter split-orientation="horizontal" split-proportion="0.5340681">
           <split-first>
-            <splitter split-orientation="horizontal" split-proportion="0.52464616">
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="912">
+                      <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/Helpers.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="418">
+                      <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Camion.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="88">
+                      <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <splitter split-orientation="vertical" split-proportion="0.6979472">
               <split-first>
                 <leaf>
                   <file pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java">
+                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Person.java">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="293">
-                          <caret line="32" column="19" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="19" />
+                        <state relative-caret-position="1086">
+                          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
                           <folding>
                             <element signature="imports" expanded="true" />
                           </folding>
@@ -41,35 +83,30 @@
                     </entry>
                   </file>
                   <file pinned="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Depot.java">
+                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="682">
-                          <caret line="47" selection-start-line="47" selection-end-line="47" />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file pinned="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Camion.java">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="88">
-                          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file pinned="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="513">
-                          <caret line="47" selection-start-line="47" selection-end-line="47" />
+                        <state relative-caret-position="1007">
+                          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
                           <folding>
                             <element signature="imports" expanded="true" />
-                            <element signature="e#999#1000#0" expanded="true" />
-                            <element signature="e#1234#1235#0" expanded="true" />
-                            <element signature="e#1259#1260#0" expanded="true" />
-                            <element signature="e#1283#1284#0" expanded="true" />
-                            <element signature="e#1302#1303#0" expanded="true" />
+                            <element signature="e#750#751#0" expanded="true" />
+                            <element signature="e#773#774#0" expanded="true" />
+                            <element signature="e#1571#1572#0" expanded="true" />
+                            <element signature="e#1590#1591#0" expanded="true" />
+                            <element signature="e#758#759#0" expanded="true" />
+                            <element signature="e#780#781#0" expanded="true" />
+                            <element signature="e#813#814#0" expanded="true" />
+                            <element signature="e#835#836#0" expanded="true" />
+                            <element signature="e#857#858#0" expanded="true" />
+                            <element signature="e#892#893#0" expanded="true" />
+                            <element signature="e#914#915#0" expanded="true" />
+                            <element signature="e#949#950#0" expanded="true" />
+                            <element signature="e#1034#1035#0" expanded="true" />
+                            <element signature="e#1061#1062#0" expanded="true" />
+                            <element signature="e#1093#1094#0" expanded="true" />
+                            <element signature="e#1118#1119#0" expanded="true" />
+                            <element signature="e#1166#1167#0" expanded="true" />
+                            <element signature="e#1203#1204#0" expanded="true" />
                           </folding>
                         </state>
                       </provider>
@@ -80,19 +117,10 @@
               <split-second>
                 <leaf>
                   <file pinned="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java">
+                    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="242">
-                          <caret line="11" column="65" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="65" />
-                          <folding>
-                            <element signature="imports" expanded="true" />
-                            <element signature="e#976#977#0" expanded="true" />
-                            <element signature="e#996#997#0" expanded="true" />
-                            <element signature="e#1034#1035#0" expanded="true" />
-                            <element signature="e#1061#1062#0" expanded="true" />
-                            <element signature="e#1093#1094#0" expanded="true" />
-                            <element signature="e#1118#1119#0" expanded="true" />
-                          </folding>
+                        <state relative-caret-position="414">
+                          <caret line="25" selection-start-line="25" selection-end-line="25" />
                         </state>
                       </provider>
                     </entry>
@@ -100,19 +128,6 @@
                 </leaf>
               </split-second>
             </splitter>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="44">
-                      <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
           </split-second>
         </splitter>
       </split-first>
@@ -121,10 +136,10 @@
           <split-first>
             <leaf>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java">
+                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/TruckThread.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="244">
-                      <caret line="59" selection-start-line="59" selection-end-line="59" />
+                    <state relative-caret-position="176">
+                      <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -133,10 +148,10 @@
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverCamion.java">
+                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/PeopleThread.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="660">
-                      <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+                    <state relative-caret-position="1174">
+                      <caret line="82" column="9" lean-forward="true" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -147,9 +162,10 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/Config.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="792">
-                      <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+                    <state relative-caret-position="132">
+                      <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
                       <folding>
+                        <element signature="e#792#793#0" expanded="true" />
                         <element signature="e#821#822#0" expanded="true" />
                         <element signature="e#862#863#0" expanded="true" />
                         <element signature="e#898#899#0" expanded="true" />
@@ -166,15 +182,6 @@
                         <element signature="e#1270#1271#0" expanded="true" />
                         <element signature="e#1306#1307#0" expanded="true" />
                       </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/ParamList.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="198">
-                      <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
                     </state>
                   </provider>
                 </entry>
@@ -201,9 +208,18 @@
       </split-second>
     </splitter>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>site</find>
+      <find>new Place</find>
+      <find>getpe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,18 +238,25 @@
         <option value="$PROJECT_DIR$/src/smartBike/MyCity.java" />
         <option value="$PROJECT_DIR$/src/com/ch/smartBike/Simu_Etu.java" />
         <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/Depot.java" />
-        <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java" />
-        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java" />
         <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/Helpers.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverCamion.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/TruckThread.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/MovingPeople.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/thread/PeopleThread.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java" />
+        <option value="$PROJECT_DIR$/src/com/ch/smartBike/gui/Person.java" />
         <option value="$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java" />
         <option value="$PROJECT_DIR$/src/com/ch/smartBike/Config.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="958" />
+    <option name="x" value="1096" />
     <option name="y" value="-24" />
-    <option name="width" value="2882" />
+    <option name="width" value="2744" />
     <option name="height" value="2154" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -372,10 +395,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8842000" />
+    <option name="totallyTimeSpent" value="13818000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="958" y="-24" width="2882" height="2154" extended-state="0" />
+    <frame x="1096" y="-24" width="2744" height="2154" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -384,19 +407,19 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32991204" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" x="1735" y="1105" width="958" height="289" id="Terminal" type="FLOATING" weight="0.1319648" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="1549" y="1266" width="809" height="610" id="Run" order="2" type="FLOATING" weight="0.3297561" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.24340177" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
+      <window_info anchor="bottom" x="1481" y="382" width="809" height="610" id="Run" order="2" type="FLOATING" weight="0.3297561" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24340177" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" x="1413" y="1192" width="958" height="289" id="Terminal" order="9" type="FLOATING" weight="0.1319648" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32991204" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -406,23 +429,11 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="9" side_tool="true" weight="0.100331984" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="9" side_tool="true" visible="true" weight="0.10510949" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -440,17 +451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-          <folding>
-            <element signature="e#64#65#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/javax/imageio/ImageIO.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -468,55 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/ParamList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverCamion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/MoverHab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/People.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Camion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -524,44 +476,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Site.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Depot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="858">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/TruckThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Place.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="65" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="65" />
+        <state relative-caret-position="1007">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
             <element signature="e#1034#1035#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
             <element signature="e#1093#1094#0" expanded="true" />
             <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/Helpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/gui/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1086">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/MyCity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="912">
+          <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/thread/PeopleThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="82" column="9" lean-forward="true" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/ParamList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="132">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
+            <element signature="e#792#793#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#862#863#0" expanded="true" />
             <element signature="e#898#899#0" expanded="true" />

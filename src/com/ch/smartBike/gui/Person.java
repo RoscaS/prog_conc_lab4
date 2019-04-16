@@ -7,20 +7,20 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class People {
+public class Person {
 
 	private StatePeople state;
-	private String persName;
+	private String name;
 	private Point2D position;
 
 	private BufferedImage waitImg;
 	private BufferedImage bikeImg;
 	private BufferedImage workImg;
 
-	public People(String aPersName, Point2D aPosition) throws IOException {
-		state = StatePeople.WAIT;
-		persName = aPersName;
-		position = aPosition;
+	public Person(String name, Point2D aPosition) throws IOException {
+		this.state = StatePeople.WAIT;
+		this.position = aPosition;
+		this.name = name;
 
 		waitImg = ImageIO.read(new File("people_wait.png"));
 		bikeImg = ImageIO.read(new File("people_bike.png"));
@@ -44,8 +44,14 @@ public class People {
 		}
 	}
 
-	public String getPersName() {
-		return persName;
+
+	public void setWaitState() {
+		setState(StatePeople.WAIT);
+		System.out.println(name + "\tis waiting" + " \t\t\tstate: " + StatePeople.WAIT);
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public void setPosition(Point2D position) {

@@ -4,33 +4,29 @@ package com.ch.smartBike;
  * classe de configuration des parametres de l'application
  * nbSite: le nombre de site pour la simulation, par exemple, ecole, centre ville....
  * nbHab : le nombre d'habitant dans la ville
- * nbBorne: Le nomdre de borne de recharge sur chaque site
+ * slotsPerSite: Le nomdre de borne de recharge sur chaque site
  * nbVelo: le nombre total de velo.
  */
 public class Config {
     private int nbSite;
     private int nbHab;
-    private int nbBorne;
+    private int slotsPerSite;
     private int nbVelo;
 
     public Config() {
         this.nbSite = 5;
         this.nbHab = 5;
-        this.nbBorne = 5;
+        this.slotsPerSite = 5;
         this.nbVelo = 30;
 
-
-
-        // 5 * (5 - 2) + 3 = 18
-
-        // 4 slots
-        // 7 vélos
+        // S * (B - 2) + 3 != 30
+        // S * (B -2 + 3) = 30
     }
 
-    public Config(int nbSite, int nbHab, int nbBorne, int nbVelo) {
+    public Config(int nbSite, int nbHab, int slotsPerSite, int nbVelo) {
         this.nbSite = nbSite;
         this.nbHab = nbHab;
-        this.nbBorne = nbBorne;
+        this.slotsPerSite = slotsPerSite;
         this.nbVelo = nbVelo;
     }
 
@@ -50,12 +46,12 @@ public class Config {
         this.nbHab = nbHab;
     }
 
-    public int getNbBorne() {
-        return nbBorne;
+    public int getSlotsPerSite() {
+        return slotsPerSite;
     }
 
-    public void setNbBorne(int nbBorne) {
-        this.nbBorne = nbBorne;
+    public void setSlotsPerSite(int slotsPerSite) {
+        this.slotsPerSite = slotsPerSite;
     }
 
     public int getNbVelo() {

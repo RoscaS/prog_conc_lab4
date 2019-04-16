@@ -6,12 +6,22 @@ public interface Site {
 
 	public int getY();
 
-	public int getNbVelo();
+	// perso
+	public boolean isFreeSlots();
 
-	public void setNbVelo(int nbVelo);
+	public void takeBike(Person p);
+	public void leaveBike(Person p);
 
-	public int getNbPlaceVide();
+	public void incrementBikes(int x);
+	public void decrementBikes(int x);
+	// end perso
 
-	public void setNbPlaceVide(int nbPlaceVide);
+	public int getBikeNumber();
+
+	public void setBikeNumber(int bikeNumber);
+
+	public int getFreeSlots();
+
+	public void setFreeSlots(int freeSlots);
 
 }
