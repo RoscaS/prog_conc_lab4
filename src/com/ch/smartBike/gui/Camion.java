@@ -31,6 +31,4 @@ public class Camion {
     public void setNbVelo(int nbVelo) {
         this.nbVelo = nbVelo;
     }
-
-
 }

@@ -44,10 +44,13 @@ public class Person {
 		}
 	}
 
-
-	public void setWaitState() {
+	public void setWaitState(String where, Place place) {
 		setState(StatePeople.WAIT);
-		System.out.println(name + "\tis waiting" + " \t\t\tstate: " + StatePeople.WAIT);
+		StringBuilder sb = new StringBuilder(name);
+		sb.append(" \tis waiting" + " \tstate: ");
+		sb.append(StatePeople.WAIT).append(" ").append(place.getName());
+		sb.append(" (").append(where);
+		System.out.println(sb.append(")\n"));
 	}
 
 	public String getName() {
@@ -73,7 +76,4 @@ public class Person {
 	public StatePeople getState() {
 		return state;
 	}
-
-
-
 }

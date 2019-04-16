@@ -1,27 +1,29 @@
 package com.ch.smartBike.gui;
 
 import java.awt.geom.Point2D;
+import java.util.List;
 import java.util.Random;
 
 public class Place implements Site{
-	private String siteName;
+
+	private String name;
 	private Point2D position;
-	private int bikeNumber;
-	private int freeSlots;
+	private int bikeAvailable;
+	private int slotAvailable;
 	private int slots;
 
 	public Place(String aSiteNAme, Point2D aPosition, int slots) {
-		this.siteName = aSiteNAme;
+		this.name = aSiteNAme;
 		this.position = aPosition;
-		this.bikeNumber = slots - 2;
-		this.freeSlots = 2;
+		this.bikeAvailable = slots - 2;
+		this.slotAvailable = 2;
 		this.slots = slots;
 	}
 
-	public static Place getAlea(Place[] placeList) {
+	public static Place getAlea(List<Place> places) {
 		Random rand = new Random();
-		int value = rand.nextInt(placeList.length);
-		return placeList[value];
+		int value = rand.nextInt(places.size());
+		return places.get(value);
 	}
 
 	public boolean equals(Object o) {
@@ -29,43 +31,50 @@ public class Place implements Site{
 			return false;
 		}
 		Place other = (Place) o;
-		return this.siteName == other.siteName;
+		return this.name == other.name;
+	}
+
+	public boolean isSlotAvailable() {
+		return slotAvailable > 0;
+	}
+
+	public boolean isBikeAvailable() {
+		return bikeAvailable > 0;
 	}
 
 
-
-	public boolean isFreeSlots() {
-		return freeSlots > 0;
-	}
-
-
-	public void takeBike(Person person) {
-		bikeNumber = bikeNumber + 1;
-		freeSlots = freeSlots - 1;
+	public void takeBike(Person person, Place dest) {
+		bikeAvailable = bikeAvailable - 1;
+		slotAvailable = slotAvailable + 1;
 		Person.StatePeople s = Person.StatePeople.BIKE;
+
 		person.setState(s);
-		System.out.println(person.getName() + "\tgot a bike" + " \t\t\tstate: " + s);
+		StringBuilder sb = new StringBuilder(person.getName());
+		sb.append("\tgot a bike \tstate: ").append(s);
+		sb.append("\tfrom:\t").append(this.name);
+		sb.append("\tto:\t").append(dest.name);
+		System.out.println(sb);
 	}
 
 	public void leaveBike(Person person) {
-		bikeNumber = bikeNumber - 1;
-		freeSlots = freeSlots + 1;
+		bikeAvailable = bikeAvailable + 1;
+		slotAvailable = slotAvailable - 1;
 		Person.StatePeople s = Person.StatePeople.WORK;
 		person.setState(s);
-		System.out.println(person.getName() + "\tdropped his bike" + "\t\tstate: " + s);
+		System.out.println(person.getName() + "\tleft bike" + " \tstate: " + s);
 	}
 
 
 
 
 	public void incrementBikes(int x) {
-		bikeNumber = bikeNumber + x;
-		freeSlots = freeSlots - x;
+		bikeAvailable = bikeAvailable + x;
+		slotAvailable = slotAvailable - x;
 	}
 
 	public void decrementBikes(int x) {
-		bikeNumber = bikeNumber - x;
-		freeSlots = freeSlots + x;
+		bikeAvailable = bikeAvailable - x;
+		slotAvailable = slotAvailable + x;
 	}
 
 
@@ -73,8 +82,8 @@ public class Place implements Site{
 		return slots;
 	}
 
-	public String getSiteName() {
-		return siteName;
+	public String getName() {
+		return name;
 	}
 
 	public Point2D getPosition() {
@@ -89,17 +98,17 @@ public class Place implements Site{
 		return (int) position.getY();
 	}
 
-	public int getBikeNumber() { return bikeNumber; }
+	public int getBikeAvailable() { return bikeAvailable; }
 
-	public void setBikeNumber(int bikeNumber) {
-		this.bikeNumber = bikeNumber;
+	public void setBikeAvailable(int bikeAvailable) {
+		this.bikeAvailable = bikeAvailable;
 	}
 
 	public int getFreeSlots() {
-		return freeSlots;
+		return slotAvailable;
 	}
 
-	public void setFreeSlots(int freeSlots) {
-		this.freeSlots = freeSlots;
+	public void setSlotAvailable(int slotAvailable) {
+		this.slotAvailable = slotAvailable;
 	}
 }

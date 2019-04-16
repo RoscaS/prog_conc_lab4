@@ -15,12 +15,11 @@ public class Depot implements Site{
 	}
 
 
-	public boolean isFreeSlots() {
-		return false;
-	}
+	public boolean isSlotAvailable() { return false; }
+	public boolean isBikeAvailable() { return false; }
 
 
-	public void takeBike(Person person) { }
+	public void takeBike(Person person, Place dest) { }
 
 	public void leaveBike(Person person) { }
 
@@ -29,7 +28,6 @@ public class Depot implements Site{
 	public void incrementBikes(int x) { }
 
 	public void decrementBikes(int x) { }
-
 
 
 	public String getSiteName() {
@@ -48,19 +46,19 @@ public class Depot implements Site{
 		return (int) position.getY();
 	}
 
-	public int getBikeNumber() {
+	public int getBikeAvailable() {
 		return nbVelo;
 	}
 
-	public void setBikeNumber(int bikeNumber) {
-		this.nbVelo = bikeNumber;
+	public void setBikeAvailable(int bikeAvailable) {
+		this.nbVelo = bikeAvailable;
 	}
 
 	public int getFreeSlots() {
 		return nbPlaceVide;
 	}
 
-	public void setFreeSlots(int freeSlots) {
-		this.nbPlaceVide = freeSlots;
+	public void setSlotAvailable(int slotAvailable) {
+		this.nbPlaceVide = slotAvailable;
 	}
 }

@@ -7,8 +7,22 @@ public class ParamList {
 	private static String[] listSite = {"MAISON","ECOLE","TRAVAIL","PISCINE","MAGASIN","BOUCHERIE","BANQUE"," BAR",
 			"RESTAURANT","DISCOTHEQUE","BOULANGERIE","FITNESS","PARC","JARDIN","CINEMA"};
 
-	private static String[]  nameList ={"Oliver","Guillaume","Marcel","Louise","Marguerite","Noelle","Robert","Ben",
-			"Adrienne","Hedvige","Eric","Emile","Garland","Elisabeth","Patrick "};
+	private static String[]  nameList ={
+			"Oliver",
+			"Guille",
+			"Marcel",
+			"Louise",
+			"Margee",
+			"Noelle",
+			"Robert",
+			"Benben",
+			"Adrien",
+			"Hedvis",
+			"Ericso",
+			"Emilie",
+			"Garlan",
+			"Elisah",
+			"Patrus"};
 
 	public static String getSiteName(int index)
 	{

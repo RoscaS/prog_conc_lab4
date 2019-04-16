@@ -2,26 +2,23 @@ package com.ch.smartBike.gui;
 
 public interface Site {
 
-	public int getX();
-
-	public int getY();
+	int getX();
+	int getY();
 
 	// perso
-	public boolean isFreeSlots();
+	boolean isSlotAvailable();
+	boolean isBikeAvailable();
 
-	public void takeBike(Person p);
-	public void leaveBike(Person p);
+	void takeBike(Person p, Place dest);
+	void leaveBike(Person p);
 
-	public void incrementBikes(int x);
-	public void decrementBikes(int x);
+	void incrementBikes(int x);
+	void decrementBikes(int x);
 	// end perso
 
-	public int getBikeNumber();
-
-	public void setBikeNumber(int bikeNumber);
-
-	public int getFreeSlots();
-
-	public void setFreeSlots(int freeSlots);
+	int getBikeAvailable();
+	void setBikeAvailable(int bikeAvailable);
+	int getFreeSlots();
+	void setSlotAvailable(int slotAvailable);
 
 }

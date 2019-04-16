@@ -14,10 +14,16 @@ public class Config {
     private int nbVelo;
 
     public Config() {
+
         this.nbSite = 5;
-        this.nbHab = 5;
+        this.nbHab = 10;
         this.slotsPerSite = 5;
         this.nbVelo = 30;
+
+        // this.nbSite = 5;
+        // this.nbHab = 5;
+        // this.slotsPerSite = 5;
+        // this.nbVelo = 30;
 
         // S * (B - 2) + 3 != 30
         // S * (B -2 + 3) = 30
