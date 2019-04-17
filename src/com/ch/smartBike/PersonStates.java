@@ -1,4 +1,4 @@
-package com.ch.smartBikeBis;
+package com.ch.smartBike;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

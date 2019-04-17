@@ -1,6 +1,6 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
-import com.ch.smartBikeBis.PersonStates;
+import com.ch.smartBike.PersonStates;
 
 import java.awt.image.BufferedImage;
 
@@ -11,7 +11,7 @@ public class Person extends Entity {
     private String name;
 
     /*------------------------------------------------------------------*\
-	|*							Constructors							*|
+	|*							Constructors						  *|
 	\*------------------------------------------------------------------*/
 
     public Person(String name) {
@@ -21,7 +21,7 @@ public class Person extends Entity {
     }
 
     /*------------------------------------------------------------------*\
-   	|*							Public Methods 							*|
+   	|*							Public Methods 						  *|
    	\*------------------------------------------------------------------*/
 
 	/*------------------------------*\

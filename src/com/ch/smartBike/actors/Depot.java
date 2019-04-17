@@ -1,6 +1,6 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
-import com.ch.smartBikeBis.Default;
+import com.ch.smartBike.Settings;
 
 import java.awt.geom.Point2D;
 
@@ -11,7 +11,7 @@ public class Depot extends Site {
 	\*------------------------------------------------------------------*/
 
     public Depot(Point2D position) {
-        super(position, "DEPOT", Default.DEPOT_AVAILABLE_BIKES);
+        super(position, "DEPOT", Settings.DEPOT_AVAILABLE_BIKES);
     }
 
     /*------------------------------------------------------------------*\
@@ -19,11 +19,11 @@ public class Depot extends Site {
    	\*------------------------------------------------------------------*/
 
     @Override
-    public void pushBike() throws InterruptedException {
+    public void pushBike(Entity entity) throws InterruptedException {
     }
 
     @Override
-    public void pullBike() throws InterruptedException {
+    public void pullBike(Entity entity) throws InterruptedException {
     }
 
     /*------------------------------*\

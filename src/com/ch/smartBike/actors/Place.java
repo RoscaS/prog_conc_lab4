@@ -1,6 +1,6 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
-import com.ch.smartBikeBis.Default;
+import com.ch.smartBike.Settings;
 
 import java.awt.geom.Point2D;
 
@@ -14,7 +14,7 @@ public class Place extends Site {
 
     public Place(Point2D position, String name, int bikes) {
         super(position, name, bikes);
-        this.totalSlots = Default.SLOTS;
+        this.totalSlots = Settings.SLOTS;
     }
 
     /*------------------------------------------------------------------*\
@@ -37,20 +37,23 @@ public class Place extends Site {
         setAvailableBikes(getAvailableBikes() - 1);
     }
 
-    public void pushBike() throws InterruptedException {
+    public void pushBike(Entity entity) throws InterruptedException {
+
         try {
             lock.lock();
+
             while (!isAvailableSlots()) {
                 fullCond.await();
             }
             incrementBikes();
             emptyCond.signalAll();
+
         } finally {
             lock.unlock();
         }
     }
 
-    public void pullBike() throws InterruptedException {
+    public void pullBike(Entity entity) throws InterruptedException {
         try {
             lock.lock();
             while (!isAvailableBikes()) {
@@ -61,13 +64,5 @@ public class Place extends Site {
         } finally {
             lock.unlock();
         }
-    }
-
-    /*------------------------------*\
-	|*				Getters			*|
-	\*------------------------------*/
-
-    public int getTotalSlots() {
-        return totalSlots;
     }
 }

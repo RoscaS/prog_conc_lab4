@@ -1,33 +1,45 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
 import java.awt.geom.Point2D;
 
-public class Camion extends Entity{
+public class Truck extends Entity{
 
-    private int availableBikes;
+    private int bikesLoaded;
+
+
 	/*------------------------------------------------------------------*\
 	|*							Constructors							*|
 	\*------------------------------------------------------------------*/
-	public Camion(Point2D position){
+
+	public Truck(Point2D position){
 	    super.setPosition(position);
-	    availableBikes = 0;
+        bikesLoaded = 0;
     }
 
     /*------------------------------------------------------------------*\
    	|*							Public Methods 							*|
    	\*------------------------------------------------------------------*/
 
+
 	/*------------------------------*\
 	|*				Getters			*|
 	\*------------------------------*/
-	public int getAvailableBikes(){
-        return availableBikes;
+	public int getBikesLoaded(){
+        return bikesLoaded;
     }
 
     /*------------------------------*\
    	|*				Setters			*|
    	\*------------------------------*/
     public void setAvailableBikes(int bikes){
-        availableBikes = bikes;
+        bikesLoaded = bikes;
+    }
+
+    public void incrementBikes(int n) {
+        setAvailableBikes(bikesLoaded + n);
+    }
+
+    public void decrementBikes(int n) {
+        setAvailableBikes(bikesLoaded - n);
     }
 }

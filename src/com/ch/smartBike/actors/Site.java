@@ -1,4 +1,4 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
 import java.awt.geom.Point2D;
 import java.util.concurrent.locks.Condition;
@@ -33,11 +33,29 @@ public abstract class Site {
    	|*							Public Methods 							*|
    	\*------------------------------------------------------------------*/
 
-    public abstract void pushBike() throws InterruptedException;
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(name);
+        return sb.toString();
+    }
 
-    public abstract void pullBike()  throws InterruptedException;
+    public abstract void pushBike(Entity entity) throws InterruptedException;
 
-	/*------------------------------*\
+    public abstract void pullBike(Entity entity)  throws InterruptedException;
+
+    public void incrementBikes(int n) {
+        lock.lock();
+        setAvailableBikes(getAvailableBikes() + n);
+        lock.unlock();
+    }
+
+    public void decrementBikes(int n) {
+        lock.lock();
+        setAvailableBikes(getAvailableBikes() - n);
+        lock.unlock();
+    }
+
+    /*------------------------------*\
 	|*				Getters			*|
 	\*------------------------------*/
 
@@ -68,4 +86,6 @@ public abstract class Site {
     public void setAvailableBikes(int availableBikes) {
         this.availableBikes = availableBikes;
     }
+
+
 }

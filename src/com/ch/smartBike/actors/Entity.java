@@ -1,4 +1,4 @@
-package com.ch.smartBikeBis.actors;
+package com.ch.smartBike.actors;
 
 import java.awt.geom.Point2D;
 

@@ -1,38 +1,29 @@
-package com.ch.smartBikeBis.threads;
+package com.ch.smartBike.threads;
 
 import com.ch.Helpers;
-import com.ch.smartBikeBis.Default;
-import com.ch.smartBikeBis.MyCity;
-import com.ch.smartBikeBis.PersonStates;
-import com.ch.smartBikeBis.actors.Person;
-import com.ch.smartBikeBis.actors.Place;
+import com.ch.smartBike.Settings;
+import com.ch.smartBike.MyCity;
+import com.ch.smartBike.PersonStates;
+import com.ch.smartBike.actors.Person;
+import com.ch.smartBike.actors.Place;
+import com.ch.smartBike.actors.Site;
 
 import java.awt.geom.Point2D;
 import java.util.List;
 
-public class PersonJob extends Thread {
-
-    private MyCity city;
-    private Person person;
-    private Place start;
-    private Place destination;
-
-    private double deltaX;
-    private double deltaY;
+public class PersonJob extends BaseJob {
 
     /*------------------------------------------------------------------*\
 	|*							Constructors							*|
 	\*------------------------------------------------------------------*/
 
     public PersonJob(Person person, Place start, Place destination, MyCity city) {
-        this.city = city;
-        this.person = person;
-        this.start = start;
-        this.destination = destination;
+        super(person, start, destination, city);
     }
 
     @Override
     public void run() {
+        entity.setPosition(new Point2D.Double(start.getX(), start.getY()));
 
         while (true) {
             updateCoords();
@@ -41,7 +32,7 @@ public class PersonJob extends Thread {
             leaveBike();
             repaint();
             simulateWorkTime();
-            updatePlaces();
+            updateStartAndDestination();
         }
     }
 
@@ -49,18 +40,18 @@ public class PersonJob extends Thread {
 	|*							Private Methods 						*|
 	\*------------------------------------------------------------------*/
 
-    private void updatePlaces() {
-        List<Place> p = Default.PLACES_LIST;
+    private void updateStartAndDestination() {
+        List<Site> p = Settings.SITE_LIST;
         start = destination;
         destination = p.get(Helpers.randint(0, p.size() - 1, p.indexOf(start)));
     }
 
     private void takeBike() {
-        if (!start.isAvailableBikes()) {
+        if (!((Place)start).isAvailableBikes()) {
             changeState(PersonStates.WAIT);
         }
         try {
-            start.pullBike();
+            start.pullBike(entity);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -68,11 +59,11 @@ public class PersonJob extends Thread {
     }
 
     private void leaveBike() {
-        if (!destination.isAvailableSlots()) {
+        if (!((Place)destination).isAvailableSlots()) {
             changeState(PersonStates.WAIT);
         }
         try {
-            destination.pushBike();
+            destination.pushBike(entity);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -80,8 +71,8 @@ public class PersonJob extends Thread {
     }
 
     private void simulateWorkTime() {
-        int min = Default.MIN_WORK_TIME;
-        int max = Default.MAX_WORK_TIME;
+        int min = Settings.MIN_WORK_TIME;
+        int max = Settings.MAX_WORK_TIME;
         try {
             sleep(Helpers.randint(min, max));
         } catch (InterruptedException e) {
@@ -94,51 +85,16 @@ public class PersonJob extends Thread {
    	\*------------------------------*/
 
     private void changeState(PersonStates state) {
-        person.setState(state);
+        ((Person)entity).setState(state);
 
-        if (Default.DEBUG) {
+        if (Settings.LOGGING) {
             StringBuilder sb = new StringBuilder();
             sb.append(state == PersonStates.WAIT ? "\t" : "");
-            sb.append(person.getName());
+            sb.append(((Person)entity).getName());
             sb.append("\tcurrent state: ").append(state);
             sb.append("\tjourney: [").append(start.getName());
             sb.append(" -> ").append(destination.getName());
             System.out.println(sb.append("]"));
         }
-    }
-
-    /*------------------------------*\
-   	|*				Graphics		*|
-   	\*------------------------------*/
-
-    private void updateCoords() {
-        deltaX = (destination.getX() - start.getX()) / 100.0;
-        deltaY = (destination.getY() - start.getY()) / 100.0;
-    }
-
-    private void updateDraw() {
-        double deltaXAdd = 0;
-        double deltaYAdd = 0;
-
-        int dt = Helpers.randint(20, 60);
-
-        for (int i = 1; i <= 100; i++) {
-            deltaXAdd += deltaX;
-            deltaYAdd += deltaY;
-            double x = start.getX() + deltaXAdd;
-            double y = start.getY() + deltaYAdd;
-            person.setPosition(new Point2D.Double(x, y));
-            city.repaint();
-            try {
-                sleep(dt);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private void repaint() {
-        person.setPosition(new Point2D.Double(destination.getX(), destination.getY()));
-        city.repaint();
     }
 }
