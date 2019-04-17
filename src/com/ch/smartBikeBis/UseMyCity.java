@@ -10,8 +10,7 @@ public class UseMyCity {
         JFrame frame = new JFrame("Bike Simulation");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Config config = new Config();
-        MyCity city = new MyCity(config);
+        MyCity city = new MyCity();
 
         frame.setPreferredSize(new Dimension(800, 600));
         frame.setContentPane(city);

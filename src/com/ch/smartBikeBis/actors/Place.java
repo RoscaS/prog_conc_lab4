@@ -1,6 +1,6 @@
-package com.ch.smartBikeBis.gui;
+package com.ch.smartBikeBis.actors;
 
-import com.ch.smartBikeBis.Constants;
+import com.ch.smartBikeBis.Default;
 
 import java.awt.geom.Point2D;
 
@@ -12,9 +12,9 @@ public class Place extends Site {
    	|*							Constructors							*|
    	\*------------------------------------------------------------------*/
 
-    public Place(Point2D position, String name, int totalSlots) {
-        super(position, totalSlots - Constants.INITIAL_FREE_SLOTS, name);
-        this.totalSlots = totalSlots;
+    public Place(Point2D position, String name, int bikes) {
+        super(position, name, bikes);
+        this.totalSlots = Default.SLOTS;
     }
 
     /*------------------------------------------------------------------*\
@@ -29,11 +29,11 @@ public class Place extends Site {
         return getAvailableBikes() > 0;
     }
 
-    public void incrementBikes() { // synchronized?
+    public void incrementBikes() {
         setAvailableBikes(getAvailableBikes() + 1);
     }
 
-    public void decrementBikes() { // synchronized?
+    public void decrementBikes() {
         setAvailableBikes(getAvailableBikes() - 1);
     }
 

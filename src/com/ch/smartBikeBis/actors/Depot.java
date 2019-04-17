@@ -1,4 +1,6 @@
-package com.ch.smartBikeBis.gui;
+package com.ch.smartBikeBis.actors;
+
+import com.ch.smartBikeBis.Default;
 
 import java.awt.geom.Point2D;
 
@@ -8,8 +10,8 @@ public class Depot extends Site {
 	|*							Constructors							*|
 	\*------------------------------------------------------------------*/
 
-    public Depot(Point2D position, int availableBikes) {
-        super(position, availableBikes, "DEPOT");
+    public Depot(Point2D position) {
+        super(position, "DEPOT", Default.DEPOT_AVAILABLE_BIKES);
     }
 
     /*------------------------------------------------------------------*\

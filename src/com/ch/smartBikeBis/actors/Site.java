@@ -1,4 +1,4 @@
-package com.ch.smartBikeBis.gui;
+package com.ch.smartBikeBis.actors;
 
 import java.awt.geom.Point2D;
 import java.util.concurrent.locks.Condition;
@@ -19,10 +19,10 @@ public abstract class Site {
 	|*							Constructors							*|
 	\*------------------------------------------------------------------*/
 
-    public Site(Point2D position, int availableBikes, String name) {
-        this.name = name;
+    public Site(Point2D position, String name, int bikes) {
+        this.availableBikes = bikes;
         this.position = position;
-        this.availableBikes = availableBikes;
+        this.name = name;
 
         lock = new ReentrantLock();
         emptyCond = lock.newCondition();

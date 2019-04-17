@@ -1,19 +1,16 @@
 package com.ch.smartBikeBis.threads;
 
 import com.ch.Helpers;
+import com.ch.smartBikeBis.Default;
 import com.ch.smartBikeBis.MyCity;
 import com.ch.smartBikeBis.PersonStates;
-import com.ch.smartBikeBis.gui.Person;
-import com.ch.smartBikeBis.gui.Place;
+import com.ch.smartBikeBis.actors.Person;
+import com.ch.smartBikeBis.actors.Place;
 
 import java.awt.geom.Point2D;
 import java.util.List;
 
 public class PersonJob extends Thread {
-
-    private final int MIN_WORK_TIME = 1000;
-    private final int MAX_WORK_TIME = 10000; // remonter dans settings
-    private boolean debug = true;
 
     private MyCity city;
     private Person person;
@@ -53,7 +50,7 @@ public class PersonJob extends Thread {
 	\*------------------------------------------------------------------*/
 
     private void updatePlaces() {
-        List<Place> p = city.getPlaces();
+        List<Place> p = Default.PLACES_LIST;
         start = destination;
         destination = p.get(Helpers.randint(0, p.size() - 1, p.indexOf(start)));
     }
@@ -83,8 +80,10 @@ public class PersonJob extends Thread {
     }
 
     private void simulateWorkTime() {
+        int min = Default.MIN_WORK_TIME;
+        int max = Default.MAX_WORK_TIME;
         try {
-            sleep(Helpers.randint(MIN_WORK_TIME, MAX_WORK_TIME));
+            sleep(Helpers.randint(min, max));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -97,7 +96,7 @@ public class PersonJob extends Thread {
     private void changeState(PersonStates state) {
         person.setState(state);
 
-        if (debug) {
+        if (Default.DEBUG) {
             StringBuilder sb = new StringBuilder();
             sb.append(state == PersonStates.WAIT ? "\t" : "");
             sb.append(person.getName());
@@ -142,13 +141,4 @@ public class PersonJob extends Thread {
         person.setPosition(new Point2D.Double(destination.getX(), destination.getY()));
         city.repaint();
     }
-
-    /*------------------------------*\
-   	|*				Getters			*|
-   	\*------------------------------*/
-
-   	/*------------------------------------------------------------------*\
-   	|*							Public Methods 							*|
-   	\*------------------------------------------------------------------*/
-
 }

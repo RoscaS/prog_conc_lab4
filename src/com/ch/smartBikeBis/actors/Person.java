@@ -1,4 +1,4 @@
-package com.ch.smartBikeBis.gui;
+package com.ch.smartBikeBis.actors;
 
 import com.ch.smartBikeBis.PersonStates;
 
