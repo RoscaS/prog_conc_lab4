@@ -1,8 +1,6 @@
 package com.ch.smartBike.actors;
-
 import java.awt.geom.Point2D;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Semaphore;
 
 public abstract class Site {
 
@@ -11,26 +9,22 @@ public abstract class Site {
 
     private int availableBikes;
 
-    protected ReentrantLock lock;
-    protected Condition emptyCond;
-    protected Condition fullCond;
+    protected Semaphore lock;
+
 
 	/*------------------------------------------------------------------*\
-	|*							Constructors							*|
+	|*							Constructors						  *|
 	\*------------------------------------------------------------------*/
 
     public Site(Point2D position, String name, int bikes) {
         this.availableBikes = bikes;
         this.position = position;
         this.name = name;
-
-        lock = new ReentrantLock();
-        emptyCond = lock.newCondition();
-        fullCond = lock.newCondition();
+        lock = new Semaphore(1);
     }
 
     /*------------------------------------------------------------------*\
-   	|*							Public Methods 							*|
+   	|*							Public Methods 						  *|
    	\*------------------------------------------------------------------*/
 
     @Override
@@ -43,20 +37,29 @@ public abstract class Site {
 
     public abstract void pullBike(Entity entity)  throws InterruptedException;
 
-    public void incrementBikes(int n) {
-        lock.lock();
+    public void incrementBikes(int n){
+        try {
+            lock.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         setAvailableBikes(getAvailableBikes() + n);
-        lock.unlock();
+        lock.release();
     }
 
-    public void decrementBikes(int n) {
-        lock.lock();
+    public void decrementBikes(int n){
+
+        try {
+            lock.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         setAvailableBikes(getAvailableBikes() - n);
-        lock.unlock();
+        lock.release();
     }
 
     /*------------------------------*\
-	|*				Getters			*|
+	|*				Getters		   *|
 	\*------------------------------*/
 
     public Point2D getPosition() {
@@ -80,7 +83,7 @@ public abstract class Site {
     }
 
     /*------------------------------*\
-   	|*				Getters			*|
+   	|*			  Setters	       *|
    	\*------------------------------*/
 
     public void setAvailableBikes(int availableBikes) {

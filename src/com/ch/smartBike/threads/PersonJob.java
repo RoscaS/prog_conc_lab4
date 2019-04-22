@@ -14,7 +14,7 @@ import java.util.List;
 public class PersonJob extends BaseJob {
 
     /*------------------------------------------------------------------*\
-	|*							Constructors							*|
+	|*							Constructors						  *|
 	\*------------------------------------------------------------------*/
 
     public PersonJob(Person person, Place start, Place destination, MyCity city) {
@@ -37,7 +37,7 @@ public class PersonJob extends BaseJob {
     }
 
 	/*------------------------------------------------------------------*\
-	|*							Private Methods 						*|
+	|*							Private Methods 					  *|
 	\*------------------------------------------------------------------*/
 
     private void updateStartAndDestination() {

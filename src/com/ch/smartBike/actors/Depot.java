@@ -25,12 +25,4 @@ public class Depot extends Site {
     @Override
     public void pullBike(Entity entity) throws InterruptedException {
     }
-
-    /*------------------------------*\
-	|*				Getters			*|
-	\*------------------------------*/
-
-	/*------------------------------------------------------------------*\
-	|*							Private Methods 						*|
-	\*------------------------------------------------------------------*/
 }

@@ -1,24 +1,34 @@
 package com.ch.smartBike.actors;
 
 import com.ch.smartBike.Settings;
-
 import java.awt.geom.Point2D;
+import java.util.concurrent.Semaphore;
 
 public class Place extends Site {
 
     private int totalSlots;
+    protected Semaphore emptyCond;
+    protected Semaphore fullCond;
 
     /*------------------------------------------------------------------*\
-   	|*							Constructors							*|
+   	|*							Constructors						  *|
    	\*------------------------------------------------------------------*/
 
     public Place(Point2D position, String name, int bikes) {
         super(position, name, bikes);
         this.totalSlots = Settings.SLOTS;
+        emptyCond = new Semaphore(Settings.SLOTS);
+        fullCond = new Semaphore(Settings.SLOTS);
+        try {
+            emptyCond.acquire(Settings.INITIAL_FREE_SLOTS);
+            fullCond.acquire(bikes);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /*------------------------------------------------------------------*\
-   	|*							Public Methods 							*|
+   	|*							Public Methods 						  *|
    	\*------------------------------------------------------------------*/
 
     public boolean isAvailableSlots() {
@@ -38,31 +48,14 @@ public class Place extends Site {
     }
 
     public void pushBike(Entity entity) throws InterruptedException {
-
-        try {
-            lock.lock();
-
-            while (!isAvailableSlots()) {
-                fullCond.await();
-            }
-            incrementBikes();
-            emptyCond.signalAll();
-
-        } finally {
-            lock.unlock();
-        }
+        fullCond.acquire();
+        incrementBikes();
+        emptyCond.release();
     }
 
     public void pullBike(Entity entity) throws InterruptedException {
-        try {
-            lock.lock();
-            while (!isAvailableBikes()) {
-                emptyCond.await();
-            }
-            decrementBikes();
-            fullCond.signalAll();
-        } finally {
-            lock.unlock();
-        }
+        emptyCond.acquire();
+        decrementBikes();
+        fullCond.release();
     }
 }
