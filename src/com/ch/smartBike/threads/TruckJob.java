@@ -15,7 +15,6 @@ public class TruckJob extends BaseJob {
     private List<Site> tour;
     private Truck truck;
 
-
 	/*------------------------------------------------------------------*\
 	|*							Constructors						  *|
 	\*------------------------------------------------------------------*/
