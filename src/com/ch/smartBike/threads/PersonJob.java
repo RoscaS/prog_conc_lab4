@@ -89,12 +89,14 @@ public class PersonJob extends BaseJob {
 
         if (Settings.LOGGING) {
             StringBuilder sb = new StringBuilder();
-            sb.append(state == PersonStates.WAIT ? "\t" : "");
+            // sb.append(state == PersonStates.WAIT ? "\t" : "");
             sb.append(((Person)entity).getName());
             sb.append("\tcurrent state: ").append(state);
             sb.append("\tjourney: [").append(start.getName());
             sb.append(" -> ").append(destination.getName());
-            System.out.println(sb.append("]"));
+            sb.append("]");
+            sb.append(state == PersonStates.WAIT ? "\t\t /!\\ waiting" : "");
+            System.out.println(sb);
         }
     }
 }
