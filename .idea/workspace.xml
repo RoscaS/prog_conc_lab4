@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f4bf962-6f5f-4451-aa5e-e7b9cbfb9d99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/bike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/camion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/people_action.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/people_bike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/people_wait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/prog_conc_lab4/img/place.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prog_conc_lab4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ch/smartBike/actors/Site.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ch/smartBike/actors/Site.java" afterDir="false" />
-    </list>
+    <list default="true" id="4f4bf962-6f5f-4451-aa5e-e7b9cbfb9d99" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64950836">
+    <splitter split-orientation="horizontal" split-proportion="0.7646692">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
@@ -76,20 +63,23 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Site.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="882">
-                      <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+                    <state relative-caret-position="216">
+                      <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/BaseJob.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="450">
-                      <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+                    <state relative-caret-position="198">
+                      <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
                     </state>
                   </provider>
                 </entry>
@@ -115,52 +105,32 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.53833425">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Depot.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="378">
-                      <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/PersonJob.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="524">
-                      <caret line="47" selection-start-line="47" selection-end-line="47" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/TruckJob.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="450">
-                      <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Depot.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/PersonJob.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="491">
+                  <caret line="47" selection-start-line="47" selection-end-line="47" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -199,11 +169,6 @@
             <path>
               <item name="Java_conc-labo3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java_conc-labo3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java_conc-labo3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java_conc-labo3" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java_conc-labo3" type="b2602c69:ProjectViewProjectNode" />
@@ -249,12 +214,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556027982304</updated>
-      <workItem from="1556027983963" duration="8000" />
+      <workItem from="1556027983963" duration="97000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41000" />
+    <option name="totallyTimeSpent" value="130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-24" width="1920" height="1074" extended-state="0" />
@@ -275,7 +240,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" x="435" y="165" width="1002" height="540" id="Terminal" order="9" type="FLOATING" weight="0.1319648" />
+      <window_info anchor="bottom" x="431" y="113" width="1002" height="540" id="Terminal" order="9" type="FLOATING" weight="0.1319648" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32957333" />
@@ -288,7 +253,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="9" side_tool="true" visible="true" weight="0.04853862" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="9" side_tool="true" visible="true" weight="0.16388309" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,20 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Site.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/BaseJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Depot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -354,10 +305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/PersonJob.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Place.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="378">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -366,18 +317,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/TruckJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="378">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Place.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/PersonJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="491">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/threads/BaseJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ch/smartBike/actors/Site.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
