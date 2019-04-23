@@ -10,7 +10,7 @@ import java.io.IOException;
 public class UseMyCity {
 
     public static void main(String[] args) throws IOException {
-        Settings.handleInitialValues(args);
+        Settings.getArgs(args);
         setFrame();
     }
 

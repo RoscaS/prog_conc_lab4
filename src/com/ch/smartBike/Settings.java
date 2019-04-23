@@ -11,10 +11,10 @@ import java.util.List;
 /**
  * Application setup class.
  * You might change values of:
- *  <ul>
- *      <li>Default development values</li>
- *      <li>Default settings</li>
- *  </ul>
+ * <ul>
+ * <li>Default development values</li>
+ * <li>Default settings</li>
+ * </ul>
  */
 public class Settings {
 
@@ -35,7 +35,7 @@ public class Settings {
        	|*	    Default settings        *|
        	\*------------------------------*/
         // If set, default development values are replaced by user input
-        PRODUCTION = false;
+        PRODUCTION = true;
         // Print activity logging on stdout
         LOGGING = true;
         // Used to paint the simulation
@@ -110,7 +110,7 @@ public class Settings {
         System.exit(-1);
     }
 
-    public static void handleInitialValues(String[] args) {
+    public static void getArgs(String[] args) {
         if (PRODUCTION) {
             captureInput(args);
         }
@@ -165,10 +165,11 @@ public class Settings {
         if (args.length < 5) {
             Settings.inputErrorExit();
         }
-        Settings.setPEOPLES(args[1]);
-        Settings.setSITES(args[2]);
-        Settings.setSLOTS(args[3]);
-        Settings.setBIKES(args[4]);
+
+        setSITES(args[1]);
+        setPEOPLES(args[2]);
+        setSLOTS(args[3]);
+        setBIKES(args[4]);
     }
 
     private static int parseInput(String input) {
@@ -240,7 +241,6 @@ public class Settings {
         }
         return people;
     }
-
 
 
     // private final static String[] placeNames = {

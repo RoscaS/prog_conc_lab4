@@ -32,9 +32,9 @@ public class MyCity extends JPanel {
 	\*------------------------------------------------------------------*/
 
     public MyCity() throws IOException {
-        placeImg = ImageIO.read(new File("place.png"));
-        bikeImg = ImageIO.read(new File("bike.png"));
-        camionImg = ImageIO.read(new File("camion.png"));
+        placeImg = ImageIO.read(new File("resources/place.png"));
+        bikeImg = ImageIO.read(new File("resources/bike.png"));
+        camionImg = ImageIO.read(new File("resources/camion.png"));
 
         depot = new Depot(new Point2D.Double(650, 20));
         truck = new Truck(depot.getPosition());

@@ -11,13 +11,15 @@ public enum PersonStates {
     BIKE("people_bike.png"),
     WORK("people_action.png");
 
+    private final static String dir = "resources/";
+
 	/*------------------------------------------------------------------*\
 	|*							Constructors							*|
 	\*------------------------------------------------------------------*/
 
-    PersonStates(String path)  {
+    PersonStates(String file)  {
         try {
-            image = ImageIO.read(new File(path));
+            image = ImageIO.read(new File(dir + file));
         } catch (IOException e) {
             e.printStackTrace();
         }
