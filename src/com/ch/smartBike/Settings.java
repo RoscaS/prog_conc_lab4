@@ -123,7 +123,6 @@ public class Settings {
     public static void setPEOPLES(String input) {
         int value = parseInput(input);
         if (value > PERSON_LIST.size()) {
-            System.out.println("people");
             inputErrorExit();
         }
         PEOPLES = value;
@@ -132,7 +131,6 @@ public class Settings {
     public static void setSITES(String input) {
         int value = parseInput(input);
         if (value > SITE_LIST.size()) {
-            System.out.println("SITES");
             inputErrorExit();
         }
         SITES = value;
@@ -141,7 +139,6 @@ public class Settings {
     public static void setSLOTS(String input) {
         int value = parseInput(input);
         if (value < MIN_SLOTS) {
-            System.out.println("SLOTS");
             inputErrorExit();
         }
         SLOTS = value;
@@ -150,7 +147,6 @@ public class Settings {
     public static void setBIKES(String input) {
         int value = parseInput(input);
         if (value <= SITES * (SLOTS - 2) + 3) {
-            System.out.println("BIKES");
             inputErrorExit();
         }
         BIKES = value;
