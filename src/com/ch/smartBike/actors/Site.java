@@ -1,12 +1,13 @@
 package com.ch.smartBike.actors;
 import java.awt.geom.Point2D;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class Site {
 
     private Point2D position;
     private String name;
-    private int availableBikes;
+    private AtomicInteger availableBikes;
 
     protected Semaphore lock;
 
@@ -16,7 +17,7 @@ public abstract class Site {
 	\*------------------------------------------------------------------*/
 
     public Site(Point2D position, String name, int bikes) {
-        this.availableBikes = bikes;
+        this.availableBikes = new AtomicInteger(bikes);
         this.position = position;
         this.name = name;
         lock = new Semaphore(1);
@@ -65,7 +66,7 @@ public abstract class Site {
   	}
 
     public int getAvailableBikes() {
-        return availableBikes;
+        return availableBikes.get();
     }
 
     public String getName() {
@@ -85,6 +86,6 @@ public abstract class Site {
    	\*------------------------------*/
 
     public void setAvailableBikes(int availableBikes) {
-        this.availableBikes = availableBikes;
+        this.availableBikes.set(availableBikes);
     }
 }
