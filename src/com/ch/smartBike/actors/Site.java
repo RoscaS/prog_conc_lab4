@@ -1,6 +1,7 @@
 package com.ch.smartBike.actors;
 
 import java.awt.geom.Point2D;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -9,7 +10,7 @@ public abstract class Site {
     private Point2D position;
     private String name;
 
-    private int availableBikes;
+    private AtomicInteger availableBikes;
 
     protected ReentrantLock lock;
     protected Condition emptyCond;
@@ -20,7 +21,7 @@ public abstract class Site {
 	\*------------------------------------------------------------------*/
 
     public Site(Point2D position, String name, int bikes) {
-        this.availableBikes = bikes;
+        this.availableBikes = new AtomicInteger(bikes);
         this.position = position;
         this.name = name;
 
@@ -44,15 +45,11 @@ public abstract class Site {
     public abstract void pullBike(Entity entity)  throws InterruptedException;
 
     public void incrementBikes(int n) {
-        lock.lock();
         setAvailableBikes(getAvailableBikes() + n);
-        lock.unlock();
     }
 
     public void decrementBikes(int n) {
-        lock.lock();
         setAvailableBikes(getAvailableBikes() - n);
-        lock.unlock();
     }
 
     /*------------------------------*\
@@ -64,7 +61,7 @@ public abstract class Site {
   	}
 
     public int getAvailableBikes() {
-        return availableBikes;
+        return availableBikes.get();
     }
 
     public String getName() {
@@ -84,7 +81,7 @@ public abstract class Site {
    	\*------------------------------*/
 
     public void setAvailableBikes(int availableBikes) {
-        this.availableBikes = availableBikes;
+        this.availableBikes.set(availableBikes);
     }
 
 
