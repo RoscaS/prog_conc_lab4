@@ -19,7 +19,6 @@ import java.util.List;
  */
 public class MyCity extends JPanel {
 
-    // private final long serialVersionUID = 1L;
     private BufferedImage bikeImg;
     private BufferedImage placeImg;
     private BufferedImage camionImg;
@@ -32,9 +31,9 @@ public class MyCity extends JPanel {
 	\*------------------------------------------------------------------*/
 
     public MyCity() throws IOException {
-        placeImg = ImageIO.read(new File("place.png"));
-        bikeImg = ImageIO.read(new File("bike.png"));
-        camionImg = ImageIO.read(new File("camion.png"));
+        placeImg = ImageIO.read(new File("resources/place.png"));
+        bikeImg = ImageIO.read(new File("resources/bike.png"));
+        camionImg = ImageIO.read(new File("resources/camion.png"));
 
         depot = new Depot(new Point2D.Double(650, 20));
         truck = new Truck(depot.getPosition());
