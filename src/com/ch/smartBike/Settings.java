@@ -151,7 +151,7 @@ public class Settings {
 
     public static void setBIKES(String input) {
         int value = parseInput(input);
-        if (value < SITES * (SLOTS - 2) + 3) {
+        if (value <= SITES * (SLOTS - 2) + 3) {
             inputErrorExit();
         }
         BIKES = value;
@@ -162,14 +162,14 @@ public class Settings {
    	\*------------------------------------------------------------------*/
 
     private static void captureInput(String[] args) {
-        if (args.length < 5) {
+        if (args.length != 4) {
+            System.out.println(args.length);
             Settings.inputErrorExit();
         }
-
-        setSITES(args[1]);
-        setPEOPLES(args[2]);
-        setSLOTS(args[3]);
-        setBIKES(args[4]);
+        setSITES(args[0]);
+        setPEOPLES(args[1]);
+        setSLOTS(args[2]);
+        setBIKES(args[3]);
     }
 
     private static int parseInput(String input) {
