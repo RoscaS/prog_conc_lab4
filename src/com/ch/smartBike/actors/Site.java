@@ -6,7 +6,6 @@ public abstract class Site {
 
     private Point2D position;
     private String name;
-
     private int availableBikes;
 
     protected Semaphore lock;
@@ -48,7 +47,6 @@ public abstract class Site {
     }
 
     public void decrementBikes(int n){
-
         try {
             lock.acquire();
         } catch (InterruptedException e) {
@@ -89,6 +87,4 @@ public abstract class Site {
     public void setAvailableBikes(int availableBikes) {
         this.availableBikes = availableBikes;
     }
-
-
 }
