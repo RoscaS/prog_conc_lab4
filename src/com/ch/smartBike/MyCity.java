@@ -2,8 +2,8 @@ package com.ch.smartBike;
 
 import com.ch.Helpers;
 import com.ch.smartBike.actors.*;
-import com.ch.smartBike.threads.PersonJob;
-import com.ch.smartBike.threads.TruckJob;
+import com.ch.smartBike.actors.PersonJob;
+import com.ch.smartBike.actors.TruckJob;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

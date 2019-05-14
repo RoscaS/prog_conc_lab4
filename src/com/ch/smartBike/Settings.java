@@ -6,6 +6,7 @@ import com.ch.smartBike.actors.Site;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -50,20 +51,6 @@ public class Settings {
         MIN_WORK_TIME = 1000;
         // Right boundary for random working time
         MAX_WORK_TIME = 10000;
-
-        /*------------------------------*\
-       	|*	    Computed properties     *|
-       	\*------------------------------*/
-        // Initial number of bikes available in Depot
-        DEPOT_AVAILABLE_BIKES = depotAvailableBikes();
-        // Initial number of bikes available on each Place
-        PLACE_AVAILABLE_BIKES = placeAvailableBikes();
-        // List of dummy Places
-        SITE_LIST = buildPlacesList();
-        // List of dummy Person
-        PERSON_LIST = buildPersonList();
-        // Usage of the program
-        USAGE = usage();
     }
 
     /*------------------------------------------------------------------*\
@@ -81,29 +68,52 @@ public class Settings {
 
     public final static boolean PRODUCTION;
     public final static boolean LOGGING;
-
     public final static int RADIUS;
     public final static int MIN_SLOTS;
-
     public final static int INITIAL_FREE_SLOTS;
-
-    public final static int PLACE_AVAILABLE_BIKES;
-
     public final static int MAX_LOAD_TRUCK;
-
     public final static int MIN_WORK_TIME;
     public final static int MAX_WORK_TIME;
 
+    private final static List<String> PLACE_NAMES = new ArrayList<>(Arrays.asList(
+            "MAISON", "ECOLE", "TRAVAIL", "PISCINE", "MAGASIN", "BOUCHERIE",
+            "BANQUE", " BAR", "RESTAURANT", "DISCOTHEQUE", "BOULANGERIE",
+            "FITNESS", "PARC", "JARDIN", "CINEMA"
+    ));
 
-    public final static int DEPOT_AVAILABLE_BIKES;
-    public final static List<Site> SITE_LIST;
-    public final static List<Person> PERSON_LIST;
+    private final static List<String> PEOPLE_NAMES = new ArrayList<>(Arrays.asList(
+            "Oliver", "Guille", "Marcel", "Louise", "Margee", "Noelle",
+            "Robert", "Benben", "Adrien", "Hedvis", "Ericso", "Emilie",
+            "Garlan", "Elisah", "Patrus"
+    ));
 
-    public final static String USAGE;
+    /*------------------------------------------------------------------*\
+   	|*							    Store            					*|
+   	\*------------------------------------------------------------------*/
+
+    public static List<Site> SITE_LIST;
+    public static List<Person> PERSON_LIST;
+
+    public static int PLACE_AVAILABLE_BIKES;
+    public static int DEPOT_AVAILABLE_BIKES;
+
+    public static String USAGE;
 
     /*------------------------------------------------------------------*\
    	|*							Public Methods   						*|
    	\*------------------------------------------------------------------*/
+
+    public static void init(String[] args) {
+        USAGE = usage();
+
+        getArgs(args);
+
+        PERSON_LIST = buildPersonList();
+        SITE_LIST = buildPlacesList();
+
+        PLACE_AVAILABLE_BIKES = placeAvailableBikes();
+        DEPOT_AVAILABLE_BIKES = depotAvailableBikes();
+    }
 
     public static void inputErrorExit() {
         System.out.println(USAGE);
@@ -117,17 +127,12 @@ public class Settings {
     }
 
     /*------------------------------*\
-   	|*				Getters			*|
-   	\*------------------------------*/
-
-
-    /*------------------------------*\
    	|*				Setters			*|
    	\*------------------------------*/
 
     public static void setPEOPLES(String input) {
         int value = parseInput(input);
-        if (value > PERSON_LIST.size()) {
+        if (value > PEOPLE_NAMES.size()) {
             inputErrorExit();
         }
         PEOPLES = value;
@@ -135,7 +140,7 @@ public class Settings {
 
     public static void setSITES(String input) {
         int value = parseInput(input);
-        if (value > SITE_LIST.size()) {
+        if (value > PLACE_NAMES.size()) {
             inputErrorExit();
         }
         SITES = value;
@@ -163,7 +168,6 @@ public class Settings {
 
     private static void captureInput(String[] args) {
         if (args.length != 4) {
-            System.out.println(args.length);
             Settings.inputErrorExit();
         }
         setSITES(args[0]);
@@ -191,9 +195,9 @@ public class Settings {
         StringBuilder sb = new StringBuilder();
         sb.append("usage: SmartCity <sites> <citizen> <slots> <bikes>");
         sb.append("\n\tsites:   \tNumber of sites       \tinteger [2; ");
-        sb.append(SITE_LIST.size()).append("]");
+        sb.append(PLACE_NAMES.size()).append("]");
         sb.append("\n\tcitizen: \tNumber of citizen   \tinteger [1; ");
-        sb.append(PERSON_LIST.size()).append("]");
+        sb.append(PEOPLE_NAMES.size()).append("]");
         sb.append("\n\tslots:   \tSlots per site        \tinteger > 4");
         sb.append("\n\tbikes:   \ttotal number of bikes \tbikes >= sites * (slots - 2) + 3");
         return sb.toString();
@@ -211,47 +215,21 @@ public class Settings {
         return SLOTS - INITIAL_FREE_SLOTS;
     }
 
-    private static List<Site> buildPlacesList() {
+    public static List<Site> buildPlacesList() {
         List<Site> places = new ArrayList<>();
-        int bikes = SLOTS - INITIAL_FREE_SLOTS;
-        String[] placeNames = {
-                "MAISON", "ECOLE", "TRAVAIL", "PISCINE", "MAGASIN", "BOUCHERIE",
-                "BANQUE", " BAR", "RESTAURANT", "DISCOTHEQUE", "BOULANGERIE",
-                "FITNESS", "PARC", "JARDIN", "CINEMA"
-        };
-
         for (int i = 1; i <= SITES; i++) {
             Point2D position = new Point2D.Double(coord(120, i - 1), coord(10, i - 1));
-            places.add(new Place(position, placeNames[i], bikes));
+            places.add(new Place(position, PLACE_NAMES.get(i), SLOTS - INITIAL_FREE_SLOTS));
         }
         return places;
     }
 
-    private static List<Person> buildPersonList() {
+    public static List<Person> buildPersonList() {
         List<Person> people = new ArrayList<>();
-        String[] peopleNames = {
-                "Oliver", "Guille", "Marcel", "Louise", "Margee", "Noelle",
-                "Robert", "Benben", "Adrien", "Hedvis", "Ericso", "Emilie",
-                "Garlan", "Elisah", "Patrus"
-        };
-
         for (int i = 1; i <= PEOPLES; i++) {
-            Person person = new Person(peopleNames[i - 1]);
+            Person person = new Person(PEOPLE_NAMES.get(i - 1));
             people.add(person);
         }
         return people;
     }
-
-
-    // private final static String[] placeNames = {
-    //         "MAISON", "ECOLE", "TRAVAIL", "PISCINE", "MAGASIN", "BOUCHERIE",
-    //         "BANQUE", " BAR", "RESTAURANT", "DISCOTHEQUE", "BOULANGERIE",
-    //         "FITNESS", "PARC", "JARDIN", "CINEMA"
-    // };
-    //
-    // private final static String[] peopleNames = {
-    //         "Oliver", "Guille", "Marcel", "Louise", "Margee", "Noelle",
-    //         "Robert", "Benben", "Adrien", "Hedvis", "Ericso", "Emilie",
-    //         "Garlan", "Elisah", "Patrus"
-    // };
 }

@@ -1,8 +1,11 @@
 package com.ch.smartBike;
 
+import jdk.nashorn.internal.ir.IfNode;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * Entry point.
@@ -10,7 +13,7 @@ import java.io.IOException;
 public class UseMyCity {
 
     public static void main(String[] args) throws IOException {
-        Settings.getArgs(args);
+        Settings.init(args);
         setFrame();
     }
 

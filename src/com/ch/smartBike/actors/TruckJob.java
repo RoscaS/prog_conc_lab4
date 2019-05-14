@@ -1,11 +1,7 @@
-package com.ch.smartBike.threads;
+package com.ch.smartBike.actors;
 
 import com.ch.smartBike.MyCity;
 import com.ch.smartBike.Settings;
-import com.ch.smartBike.actors.Depot;
-import com.ch.smartBike.actors.Place;
-import com.ch.smartBike.actors.Site;
-import com.ch.smartBike.actors.Truck;
 
 import java.util.ArrayList;
 import java.util.List;

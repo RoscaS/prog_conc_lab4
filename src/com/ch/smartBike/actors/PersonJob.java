@@ -1,12 +1,9 @@
-package com.ch.smartBike.threads;
+package com.ch.smartBike.actors;
 
 import com.ch.Helpers;
 import com.ch.smartBike.Settings;
 import com.ch.smartBike.MyCity;
 import com.ch.smartBike.PersonStates;
-import com.ch.smartBike.actors.Person;
-import com.ch.smartBike.actors.Place;
-import com.ch.smartBike.actors.Site;
 
 import java.awt.geom.Point2D;
 import java.util.List;
